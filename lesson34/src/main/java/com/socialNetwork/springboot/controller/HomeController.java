@@ -14,4 +14,13 @@ public class HomeController {
     model.addAttribute("title", "Главная страница");
     return "home";
   }
+  @GetMapping("/login")
+  public String login() {
+    return "login";
+  }
+
+  @GetMapping("/registration")
+  public String registration() {
+    return "registration";
+  }
 }
