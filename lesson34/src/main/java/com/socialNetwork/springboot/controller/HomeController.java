@@ -23,4 +23,9 @@ public class HomeController {
   public String registration() {
     return "registration";
   }
+
+  @GetMapping("/users")
+  public String users() {
+    return "users";
+  }
 }
