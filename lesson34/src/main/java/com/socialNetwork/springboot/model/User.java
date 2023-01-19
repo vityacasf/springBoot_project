@@ -1,13 +1,15 @@
 package com.socialNetwork.springboot.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 
 @Value
 @Builder
+@AllArgsConstructor
 public class User {
-  long id;
-  String username;
-  String password;
-  String role;
+  private long id;
+  private String username;
+  private String password;
+  private String role;
 }
