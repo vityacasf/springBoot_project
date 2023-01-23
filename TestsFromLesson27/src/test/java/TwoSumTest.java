@@ -1,6 +1,11 @@
 import org.example.TwoSums;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 public class TwoSumTest {
 
@@ -29,4 +34,19 @@ public class TwoSumTest {
     Assertions.assertNull(twoSums.calculate(array, desiredResult));
   }
 
+  @ParameterizedTest
+  @MethodSource("testValues")
+  public void doTest(int[] givenArray, int desiredNumber, int[] expectedResult){
+    TwoSums twoSums = new TwoSums();
+    int[] receivedResult = twoSums.calculate(givenArray, desiredNumber);
+    Assertions.assertArrayEquals(expectedResult, receivedResult);
+  }
+
+  private static Stream<Arguments> testValues() {
+    return Stream.of(
+        Arguments.of(new int[]{1, 2, 3, 4, 5, 6}, 5, new int[]{1,2}),
+        Arguments.of(null, 3, null),
+        Arguments.of(new int[]{1, 2, 3, 4}, 8, null)
+    );
+  }
 }
