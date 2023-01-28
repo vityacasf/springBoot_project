@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/application")
+@RequestMapping("")
 @RequiredArgsConstructor
 public class ApplicationController {
   private final UserService userService;
@@ -28,9 +28,4 @@ public class ApplicationController {
     return "registration";
   }
 
-  @GetMapping("/users")
-  public String users(Model model) {
-    model.addAttribute("users", userService.showUsers());
-    return "users";
-  }
 }
