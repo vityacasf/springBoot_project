@@ -8,8 +8,12 @@ CREATE TABLE users
 );
 
 INSERT INTO users (name, role, password)
-VALUES ('Olga', 'EMPLOYEE', '123');
+VALUES ('Andrey', 'EMPLOYEE', '123');
 INSERT INTO users (name, role, password)
-VALUES ('Viktor', 'ADMIN', '123');
+VALUES ('Andrey1', 'EMPLOYEE', '123');
 INSERT INTO users (name, role, password)
-VALUES ('Vlad', 'MANAGER', '123');
+VALUES ('Andrey2', 'MANAGER', '123');
+INSERT INTO users (name, role, password)
+VALUES ('Andrey3', 'MANAGER', '123');
+INSERT INTO users (name, role, password)
+VALUES ('Andrey4', 'ADMIN', '123');
